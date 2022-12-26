@@ -44,6 +44,7 @@ In Lagrangian mechanics, evolution of a system is described in terms of the gene
 
 A simplified model of the double pendulum is shown in Figure 1.
 
+[![Alt text](https://math24.net/images/double-pendulum1.svg)
 https://math24.net/images/double-pendulum1.svg
 
 
