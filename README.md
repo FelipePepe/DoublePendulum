@@ -42,12 +42,14 @@ We treat the two pendulum masses as point particles. Begin by drawing the free b
 
 The forces on the upper pendulum mass are the tension in the upper rod T1 , the tension in the lower rod T2 , and gravity −m1 g . We write separate equations for the horizontal and vertical forces, since they can be treated independently. The net force on the mass is the sum of these. Here we show the net force and use Newton's law F = m a .
 
-m1 x1'' = −T1 sin θ1 + T2 sin θ2 (5)
-m1 y1'' = T1 cos θ1 − T2 cos θ2 − m1 g (6)
+    m1 x1'' = −T1 sin θ1 + T2 sin θ2 (5)
+    m1 y1'' = T1 cos θ1 − T2 cos θ2 − m1 g (6)
+
 For the lower pendulum, the forces are the tension in the lower rod T2 , and gravity −m2 g .
 
-m2 x2'' = −T2 sin θ2 (7)
-m2 y2'' = T2 cos θ2 − m2 g (8)
+    m2 x2'' = −T2 sin θ2 (7)
+    m2 y2'' = T2 cos θ2 − m2 g (8)
+
 In relating these equations to the diagrams, keep in mind that in the example diagram θ1 is positive and θ2 is negative, because of the convention that a counter-clockwise angle is positive.
 
 ## Direct Method for Finding Equations of Motion
@@ -59,18 +61,22 @@ Now we do some algebraic manipulations with the goal of finding expressions for 
 
 Multiply equation (9) by cos θ1 and equation (10) by sin θ1 and rearrange to get
 
-T1 sin θ1 cos θ1 = −cos θ1 (m1 x1'' + m2 x2'') (11)
-T1 sin θ1 cos θ1 = sin θ1 (m1 y1'' + m2 y2'' + m2 g + m1 g) (12)
+    T1 sin θ1 cos θ1 = −cos θ1 (m1 x1'' + m2 x2'') (11)
+    T1 sin θ1 cos θ1 = sin θ1 (m1 y1'' + m2 y2'' + m2 g + m1 g) (12)
+
 This leads to the equation
 
-sin θ1 (m1 y1'' + m2 y2'' + m2 g + m1 g) = −cos θ1 (m1 x1'' + m2 x2'') (13)
+    sin θ1 (m1 y1'' + m2 y2'' + m2 g + m1 g) = −cos θ1 (m1 x1'' + m2 x2'') (13)
+
 Next, multiply equation (7) by cos θ2 and equation (8) by sin θ2 and rearrange to get
 
-T2 sin θ2 cos θ2 = −cos θ2 (m2 x2'') (14)
-T2 sin θ2 cos θ2 = sin θ2 (m2 y2'' + m2 g) (15)
+    T2 sin θ2 cos θ2 = −cos θ2 (m2 x2'') (14)
+    T2 sin θ2 cos θ2 = sin θ2 (m2 y2'' + m2 g) (15)
+
 which leads to
 
-sin θ2 (m2 y2'' + m2 g) = −cos θ2 (m2 x2'') (16)
+    sin θ2 (m2 y2'' + m2 g) = −cos θ2 (m2 x2'') (16)
+
 Next we need to use a computer algebra program to solve equations (13) and (16) for θ1'', θ2'' in terms of θ1, θ1', θ2, θ2' . Note that we also include the definitions given by equations (1-4), so that we have 2 equations (13, 16) and 2 unknowns ( θ1'', θ2'' ). The result is somewhat complicated, but is easy enough to program into the computer.
 
 <table class="fraction">
@@ -82,7 +88,7 @@ Next we need to use a computer algebra program to solve equations (13) and (16) 
             2 sin(<i>θ</i><sub>1</sub> − <i>θ</i><sub>2</sub>) <i>m</i><sub>2</sub> (<i>θ</i><sub>2</sub>'<sup>2</sup> <i>L</i><sub>2</sub> + <i>θ</i><sub>1</sub>'<sup>2</sup> <i>L</i><sub>1</sub> cos(<i>θ</i><sub>1</sub> − <i>θ</i><sub>2</sub>))
         </td>
     </tr><tr>
-        <td class="upper_line">
+        <td>
             <i>L</i><sub>1</sub> (2 <i>m</i><sub>1</sub> + <i>m</i><sub>2</sub> − <i>m</i><sub>2</sub> cos(2 <i>θ</i><sub>1</sub> − 2 <i>θ</i><sub>2</sub>))
         </td>
     </tr>
@@ -97,7 +103,7 @@ Next we need to use a computer algebra program to solve equations (13) and (16) 
             + <i>θ</i><sub>2</sub>'<sup>2</sup> <i>L</i><sub>2</sub> <i>m</i><sub>2</sub> cos(<i>θ</i><sub>1</sub> − <i>θ</i><sub>2</sub>))
         </td>
     </tr><tr>
-        <td class="upper_line">
+        <td>
             <i>L</i><sub>2</sub> (2 <i>m</i><sub>1</sub> + <i>m</i><sub>2</sub> − <i>m</i><sub>2</sub> cos(2 <i>θ</i><sub>1</sub> − 2 <i>θ</i><sub>2</sub>))
         </td>
     </tr>
